@@ -24,6 +24,7 @@ laya-snake-k3
 
 ## 代码、上游与验证
 
+- [我们自己的程序做了什么](docs/REPRODUCE.md#我们自己的程序做了什么)：原项目与适配工作的分工、自动绑核、推理优化和兼容性边界。
 - 游戏来源：[mizorewww/laya-mlx](https://github.com/mizorewww/laya-mlx)，Apache-2.0；保留原游戏规则和保护层。
 - SDK 模型：[convaiinnovations/laya](https://huggingface.co/convaiinnovations/laya) 的 multilingual 子目录。
 - ONNX 模型：[mizchi/laya-multilingual-onnx](https://huggingface.co/mizchi/laya-multilingual-onnx)，社区独立转换，不冒充官方 ONNX 发布。
