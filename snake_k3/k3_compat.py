@@ -17,4 +17,3 @@ def prepare():
             from transformers.models.modernbert import modeling_modernbert  # noqa: F401
         finally:
             torch.compile = original_compile
-
