@@ -2,7 +2,7 @@
 
 ## 1. 复现什么，不复现什么
 
-目标是在一台 SpaceMIT K3 上，从公开来源安装 Laya，运行离线贪吃蛇，并核对推理结果、AI Core 使用情况和延迟。采用 **Bianbu 4.0.5 / riscv64 / Python 3.14 / 8 GB 内存**；其他系统版本尚未验证。
+目标是在一台 SpaceMIT K3 上，从公开来源安装 Laya，运行离线贪吃蛇，并核对推理结果、AI Core 使用情况和延迟。采用 **Bianbu 4.0.5 / riscv64 / Python 3.14 / 8 GB 内存**；另已在 **Bianbu 4.0.7 + 下表锁定系统库**完成公开 v0.1.0 的独立环境复现，见 [验收记录](VALIDATION.md)。这不代表任意 4.0.7 或更新依赖均兼容。
 
 这不是视觉识别或强化学习训练：游戏规则层描述“碰撞、是否安全、食物方向”等选项，Laya 对选项分类。上游环路保护可覆盖不安全的首选，界面明确显示 `SHIELD`。没有训练/改写权重，没有远程 API，没有 Hermes 依赖。
 
@@ -67,7 +67,7 @@ free -h
 df -h .
 ```
 
-预期架构为 `riscv64`，系统为 Bianbu 4.0.5，Python 为 3.14.x。使用 Bianbu 自带的官方软件源；不要套用普通 Ubuntu x86/ARM 源。实际验证设备使用 `archive.spacemit.com/bianbu4` 的 `resolute` 和 `resolute-porting` 软件包。
+预期架构为 `riscv64`，基准系统为 Bianbu 4.0.5，Python 为 3.14.x；补测的 Bianbu 4.0.7 使用相同锁定系统包。使用 Bianbu 自带的官方软件源；不要套用普通 Ubuntu x86/ARM 源。实际验证设备使用 `archive.spacemit.com/bianbu4` 的 `resolute` 和 `resolute-porting` 软件包。
 
 ```sh
 sudo apt update
@@ -117,6 +117,14 @@ laya-snake-k3
 ```sh
 laya-snake-k3-setup --model-source /path/to/already-downloaded/models
 ```
+
+若 K3 无法连接 GitHub/Hugging Face，可以在可联网电脑下载 Release 资产，并使用源码包中的下载工具获取相同模型（该工具要求 Python 3.11 或更新版本）：
+
+```sh
+python3 scripts/models.py --directory ./models
+```
+
+将完整 `models/` 目录和校验过的 `.deb` 传到 K3，再按上面的 `--model-source` 命令导入。2026-09-21 补测实际使用这条路径，K3 直连下载因网络超时未通过。
 
 导入是复制并核对哈希，不引用其他用户的 Python 环境。损坏文件不会被静默接受；下载中断的 `.part` 可继续下载。已存在但校验失败的目标文件需要自行移走后重试，程序不会直接覆盖。
 

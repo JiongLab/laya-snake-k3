@@ -1,0 +1,11 @@
+{
+  "steps": 1200,
+  "completed_boards": 1,
+  "first_step_ms": 1750.131225999212,
+  "steady_mean_ms": 110.29430448366934,
+  "steady_median_ms": 109.32752900043852,
+  "steady_p95_ms": 115.57263199938461,
+  "steady_max_ms": 119.99691899836762,
+  "deaths": 0,
+  "interventions": 0
+}

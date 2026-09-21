@@ -1,0 +1,10 @@
+{
+  "release": "v0.1.0",
+  "system": "Bianbu 4.0.7",
+  "passed": 43,
+  "skipped": 0,
+  "duration_seconds": 111.35,
+  "fast_60_steady_mean_ms": 114.23151250846016,
+  "full_60_steady_mean_ms": 267.78124877979525,
+  "import_path": "/usr/share/laya-snake-k3/snake_k3/__init__.py"
+}
