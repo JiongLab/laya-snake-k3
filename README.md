@@ -6,7 +6,8 @@
 
 这不是大模型聊天，也不是模型直接读取像素：规则层生成各方向的描述，Laya 给出方向概率；安全保护介入时界面明确标注 `SHIELD`。不需要 API Key。
 
-![Uploading k3-screen-20260921-48s-58s.gif…]()
+<img width="1280" height="721" alt="k3-screen-20260921-48s-58s" src="https://github.com/user-attachments/assets/c6f57c75-84f8-493e-b69a-a1a97202f496" />
+
 
 
 ## 安装和复现
