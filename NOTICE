@@ -1,0 +1,32 @@
+Laya Snake K3
+Copyright 2026 JiongLab and contributors
+Licensed under the Apache License, Version 2.0.
+
+Derived from mizorewww/laya-mlx, Copyright 2026 laya-mlx contributors,
+Apache-2.0, revision fc1df62828a3fedf4d8229fdac1cbd85f1cdf337.
+https://github.com/mizorewww/laya-mlx
+The Snake game, terminal renderer, replay tools and cycle-safety mechanism
+originate there. K3 changes include a Laya SDK backend, fixed SpaceMIT ONNX
+FP16 offload, optional auxiliary estimates, startup/threads tuning, local
+compatibility adaptation, packaging and installation verification.
+
+The upstream project includes software derived from Laya:
+https://github.com/NandhaKishorM/laya
+Copyright Convai Innovations and Laya contributors, Apache-2.0.
+Upstream source revision cited by laya-mlx:
+6a5819129eb220570792e417e49723d697efd76f.
+The token sequence construction, question rendering, confidence calculation,
+presets, email utilities and language router are adapted from Laya.
+The upstream neural network is reimplemented using Apple's MLX, following
+Laya's DecisionModel and ModernBERT in Hugging Face Transformers. This K3
+distribution does not run that Apple MLX backend; it calls the Laya SDK or
+the separately downloaded community ONNX model.
+
+Model weights are NOT distributed in this repository or application package.
+The download manifest links to Convai Innovations and mizchi on Hugging Face.
+
+Binary releases bundle unmodified Python wheels listed in
+requirements-runtime.txt. Their license notices are retained in each wheel.
+The tokenizers 0.22.2 riscv64 wheel was built locally from the upstream
+release without source modifications; its Apache-2.0 license is also supplied
+in docs/licenses/tokenizers-LICENSE. See docs/THIRD_PARTY.md.

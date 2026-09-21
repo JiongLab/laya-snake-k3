@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Laya Snake K3
+Name[zh_CN]=Laya 贪吃蛇 K3
+Comment=Offline typed-decision model demo with AI Core FP16
+Exec=laya-snake-k3
+Terminal=true
+Icon=applications-games
+Categories=Game;

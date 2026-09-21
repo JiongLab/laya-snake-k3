@@ -1,0 +1,13 @@
+Package: laya-snake-k3
+Version: 0.1.0
+Section: games
+Priority: optional
+Architecture: riscv64
+Maintainer: JiongLab <298739265+JiongLab@users.noreply.github.com>
+Depends: python3 (>= 3.14), python3 (<< 3.15), python3-venv, python3-torch (= 2.9.1+dfsg-1~exp1ubuntu2), python3-numpy (= 1:2.3.5+ds-3ubuntu1), python3-safetensors (= 0.6.2-1.1), python3-spacemit-ort (= 2.0.6), spacemit-onnxruntime (= 2.0.6), spacemit-tcm (= 3.0.0+5), python3-rich, python3-regex, python3-yaml, python3-requests, python3-filelock, python3-fsspec, python3-packaging, python3-certifi, python3-idna, python3-pil, curl
+Recommends: qterminal
+Homepage: https://github.com/JiongLab/laya-snake-k3
+Description: Offline Laya Snake demo adapted for SpaceMIT K3
+ Uses a fixed SpaceMIT ONNX FP16 acceleration configuration and a visible
+ cycle-safety shield. Model weights are downloaded separately by the user.
+ Run laya-snake-k3-setup as a non-root user after installing this package.

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "laya-snake-k3"
+version = "0.1.0"
+description = "Offline Laya Snake demo for SpaceMIT K3 / Bianbu RISC-V"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+readme = "README.md"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/JiongLab/laya-snake-k3"
+
+[tool.hatch.build.targets.wheel]
+packages = ["snake_k3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["k3: requires K3 hardware and prepared models"]
